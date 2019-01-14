@@ -1,0 +1,292 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans&subset=latin,cyrillic-ext);
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+.results{
+    background: #F5F5F5;
+    width: 960px;
+    margin: auto;
+    margin-top: 63px;
+    border-radius: 15px;
+    border: solid 1px #f6f6f6;
+    /*box-shadow: inset 0 1px 3px rgba(0,0,0,0.5); */
+    box-shadow: inset 15px 0 1px  -15px rgba(0,0,0,0.5) , inset -15px 0 1px  -15px rgba(0,0,0,0.5) , inset 0 15px 1px  -15px rgba(0,0,0,0.5)  , inset 0 -15px 1px -15px rgba(0,0,0,0.5) , 15px 0 2px  -15px #000 , -15px 0 2px  -15px #000;
+    /*тень = тень1, тень2 итд*/
+    /*теньХ = смещение_по_горизонтали смещение_по_вертикали радиус_размытия цвет*/
+}
+.results__header{
+    padding-left: 20px;
+    padding-top: 29px;
+    padding-bottom: 11px;
+    color: #2E2E33;
+    font-size: 16px;
+}
+.results__route{
+    color: #4A4A4A;
+    font-size: 14px;
+    padding-left: 20px;
+    padding-bottom: 35px;
+}
+.results__route__title{
+    color: #AAAAAA;
+    font-size: 12px;
+}
+.results__route__departure, .results__route__arrival{
+    color: #0C91D7;
+    border-bottom: 1px dashed;
+}
+.results__route__date{
+    padding-left: 18px;
+}
+.results__list{
+    width: 630px;
+    margin-right: 20px;
+    display: inline-block;
+}
+.results__list__item{
+    display: inline-block;
+    width: 630px;
+    margin: 0 10px 20px 20px;
+    border-radius: 4px;
+    background: #5699C9;
+    color: white;
+    font-size: 16px;
+    box-shadow: 15px 0 15px  -15px rgba(0,0,0,0.25) , -15px 0 15px  -15px rgba(0,0,0,0.25) ,  0 15px 15px  -15px rgba(0,0,0,0.25);
+            /*15px 0 2px -15px rgba(0, 0, 0, 0.25) , 15px 0 2px -15px rgba(0, 0, 0, 0.25) , 0 -15px 15px  -15px rgba(0, 0, 0, 0.25);*/
+}
+.results__list__item__header {
+    height: 40px;
+    line-height: 40px;
+}
+.results__list__item__header__trainType{
+    float: right;
+    padding-right: 38px;
+}
+.results__list__item__header__trainNumber{
+    padding-left: 10px;
+}
+.results__list__item__header__trainName{
+    padding-left: 14px;
+}
+.results__list__item__infoBlock{
+    background: white;
+    color: #2E2E33;
+    padding-top: 15px;
+    padding-left: 10px;
+    border-radius: 0 0 4px 4px;
+}
+.results__list__item__infoBlock__path,
+.results__list__item__infoBlock__departure,
+.results__list__item__infoBlock__arrival,
+.results__list__item__infoBlock__passTime {
+    display: inline-block;
+    vertical-align: top;
+}
+.results__list__item__infoBlock__path{
+    padding-bottom: 18px;
+    width: 40%;
+}
+.results__list__item__infoBlock__arrival,
+.results__list__item__infoBlock__departure,
+.results__list__item__infoBlock__passTime {
+    width: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: auto;
+    width: 20%;
+}
+.results__list__item__infoBlock__path__route,
+.results__list__item__infoBlock__departure__header,
+.results__list__item__infoBlock__arrival__header,
+.results__list__item__infoBlock__passTime__header{
+    font-size: 12px;
+    color: #AAAAAA;
+}
+.results__list__item__infoBlock__departure__time, .results__list__item__infoBlock__arrival__time,.results__list__item__infoBlock__passTime__time{
+    font-size: 16px;
+    color: #2E2E33;
+}
+.results__list__item__infoBlock__departure__date, .results__list__item__infoBlock__arrival__date{
+    font-size: 12px;
+    color: #2E2E33;
+}
+.results__list__item__infoBlock__path__cities,.results__list__item__infoBlock__departure__time,.results__list__item__infoBlock__arrival__time,.results__list__item__infoBlock__passTime__time{
+    padding-top: 10px;
+}
+.results__list__item__infoBlock__path__cities{
+    color: #0C91D7;
+    font-size: 14px;
+    border-bottom: 1px dashed;
+    width: 70%;
+    display: inline;
+}
+.results__list__item__infoBlock__path__e{
+    display: inline-block;
+    color: white;
+    background: #0C91D7;
+    width: 14px;
+    height: 14px;
+    line-height: 11px;
+    border-radius: 100%;
+    margin-top: 5px;
+    margin-right: 5px;
+    text-align: center;
+    font-size: 15px;
+}
+.results__list__item__infoBlock__path__e-registration{
+    display: inline-block;
+    color: #0C91D7;
+    font-size: 11px;
+    border-bottom: 1px dashed;
+}
+.results__list__item__carTypes{
+    font-size: 14px;
+    color: #2E2E33;
+    margin: 0 0px 0 -10px;
+    border-top: 1px solid #AAAAAA;
+}
+.results__list__item__carTypes__type {
+    display: inline-block;
+    vertical-align: top;
+    width: 25%;
+    box-sizing: border-box;
+    -wekit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border-right: 1px solid #AAAAAA;
+    padding-left: 10px;
+}
+
+.results__list__item__carTypes__type__header{
+    font-size: 13px;
+    color: #0C91D7;
+    border-bottom: 1px dashed;
+    display: inline;
+    margin-top: 10px;
+}
+.results__list__item__carTypes__type__cost{
+    font-size: 14px;
+    color: #2E2E33;
+    margin-top: 10px;
+}
+.results__list__item__carTypes__type__seats{
+    font-size: 12px;
+    color: #2E2E33;
+    padding-bottom: 8px;
+}
+.results__list__item__carTypes__type_brhid{
+    border: hidden;
+}
+.results__list__item__carTypes_typesCount3 .results__list__item__carTypes__type {
+    width: 33.3%;
+}
+.results__list__item__carTypes_typesCount2 .results__list__item__carTypes__type {
+    width: 50%;
+}
+
+.results__list__item__carTypes__type:hover{
+    background: #0C91D7;
+}
+.results__list__item__carTypes__type:hover .results__list__item__carTypes__type__header{
+    color: #FFFFFF;
+    border-bottom: none;
+}
+.results__list__item__carTypes__type:hover .results__list__item__carTypes__type__cost{
+    color: #FFFFFF;
+    border-bottom: none;
+}
+.results__list__item__carTypes__type:hover .results__list__item__carTypes__type__seats{
+    color: #FFFFFF;
+    border-bottom: none;
+}
+/*000000000000000000000000000000000000000000000000000000000000
+00000000000000000000000000000000000000000000000000000000000000
+00000000000000000000000000000000000000000000000000000000000000
+00000000000000000000000000000000000000000000000000000000000000
+00000000000000000000000000000000000000000000000000000000000000
+00000000000000000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000000000000000*/
+
+
+.results__filters{
+    display: inline-block;
+    vertical-align: top;
+    width: 265px;
+    height: 500px;
+    /*line-height: 14.4px;*/
+    margin: 0 20px 0 20px;
+    border-radius: 4px;
+    border: #cccccc solid 1px;
+}
+.results__filters__item{
+    font-size: 12px;
+    color: #2E2E33;
+    margin: 15px 0 4px 10px;
+}
+.results__filters__item__header__triangle{
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 7px solid #2E6E9E;
+}
+.results__filters__item__header__typeName{
+    display: inline-block;
+    font-size: 17px;
+    color: #5699C9;
+    margin-left: 10px;
+}
+.results__filters__item__check__price{
+    float: right;
+    margin-right: 10px;
+}
+ .results__filters__item__check{
+     vertical-align: top;
+     margin-top: 18px;
+     width: 270px;
+ }
+.results__filters__item__check__box{
+    display: inline-block;
+    width: 18px;
+}
+.results__filters__item__check__checkBox{
+    margin: 0 10px 16px 0;
+}
+.results__filters__item__check__type{
+    display: inline-block;
+    width: 120px;
+    vertical-align: top;
+}
+
+
+
+
+
+
+
+
+
+/*.results__filters__item__check{*/
+    /*display: inline-block;*/
+    /*font-size: 12px;*/
+    /*color: #2E2E33;*/
+    /*width: auto;*/
+    /*padding: 16px 0 23px 10px;*/
+/*}*/
+/*.results__filters__item__check__box{*/
+    /*display: inline-block;*/
+    /*width: 18px;*/
+/*}*/
+
+/*.results__filters__check__box{*/
+    /*display: inline-block;*/
+    /*width: 18px;*/
+    /*border: 1px solid #2E2E33;*/
+    /*border-radius: 4px;*/
+/*}*/
+/*.results__filters__check__type{*/
+    /*display: inline-block;*/
+/*}*/

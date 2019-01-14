@@ -1,0 +1,746 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+caption, th, td {
+    text-align: left;
+    font-weight: normal;
+    vertical-align: middle;
+}
+
+q, blockquote {
+    quotes: none;
+}
+
+q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none;
+}
+
+a img {
+    border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+    display: block;
+}
+
+@font-face {
+    font-family: "Circe";
+    src: local('Circe'), url('fonts/CRC55.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Circe Light";
+    src: local('Circe Light'), url('fonts/CRC35.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Circe Extra Light";
+    src: local('Circe Extra Light'), url('fonts/CRC25.otf') format('opentype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Circe Bold";
+    src: local('Circe Bold'), url('fonts/Circe-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Circe Extra Bold";
+    src: local('Circe Extra Bold'), url('fonts/Circe-ExtraBold.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper {
+    max-width: 1220px;
+    padding: 0 20px;
+    margin: auto;
+}
+
+/*Styles for title - start*/
+section h4 {
+    font-family: 'Circe', sans-serif;
+    color: #383838;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1;
+    position: relative;
+    margin-bottom: 82px;
+    letter-spacing: 0.04em;
+}
+
+section h4:before {
+    position: absolute;
+    content: '';
+    bottom: -20px;
+    left: 0;
+    height: 3px;
+    width: 89px;
+    background: #d1d2f8;
+}
+
+/*Styles for title - end*/
+
+/*styles for text - start*/
+.text {
+    font-family: "Circe Light", sans-serif;
+    font-size: 18px;
+    letter-spacing: 0.04em;
+}
+
+.text.light {
+    color: #ffffff;
+}
+
+.text.dark {
+    color: #383838;
+}
+
+/*styles for text - end*/
+
+/*Styles for input - start*/
+.common-input {
+    width: 100%;
+    position: relative;
+    margin-bottom: 35px;
+    /*
+    font-family: Circe, sans-serif;
+    */
+}
+
+.common-input:last-of-type {
+    margin-bottom: 101px;
+}
+
+.common-input > input {
+    border: none;
+    border-bottom: 2px solid #b5b5b5;
+    background: transparent;
+    position: relative;
+    z-index: 1;
+    color: #383838;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.4;
+    width: 100%;
+    font-family: Circe, sans-serif;
+    transition: 0.4s;
+    padding-bottom: 8px;
+}
+
+.common-input > span {
+    position: absolute;
+    content: '';
+    bottom: 10px;
+    left: 13px;
+    color: #b5b5b5;
+    transition: 0.4s;
+    z-index: 0;
+    font-family: Circe Light, sans-serif;
+    font-size: 18px;
+    letter-spacing: 0.04em;
+}
+
+.common-input > input:focus {
+    border-color: #47c7b1;
+    padding-bottom: 8px;
+    padding-left: 12px;
+    letter-spacing: 0.039em;
+}
+
+.common-input > input:focus + span,
+.common-input > input.not-empty + span {
+    bottom: 37px;
+    color: #383838;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: Circe, sans-serif;
+}
+
+input.not-empty {
+    padding-left: 12px;
+    letter-spacing: 0.039em;
+}
+
+/*Styles for input - end*/
+
+/*Styles for button - start*/
+.common-btn {
+    display: inline-block;
+    padding: 15px 63px;
+    margin: auto;
+    /*background: rgba(171, 19, 25, 0.7);*/
+    box-shadow: 0 12px 36px 7px rgba(124, 126, 236, 0.21);
+    border-radius: 6px;
+    background-color: #7c7eec;
+    line-height: 1;
+    color: #ffffff;
+    font-family: Circe;
+    font-size: 18px;
+    font-weight: 400;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    letter-spacing: 0.04em;
+}
+
+.common-btn:hover {
+    background-color: #6969d1;
+}
+
+/*Styles for button - end*/
+
+.banner {
+    background-position: center;
+    background-size: cover;
+    /* background-repeat: no-repeat;*/
+    background-repeat: repeat;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.banner .info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 118px;
+    padding-top: 32px;
+    font-family: 'Circe', sans-serif;
+}
+
+.banner h1 {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+
+}
+
+.banner h1 > span {
+    font-size: 36px;
+    font-family: "Circe Bold", sans-serif;
+}
+
+.b-contacts {
+    text-align: right;
+}
+
+.b-contacts > a {
+    color: #ffffff;
+    letter-spacing: 0.04em;
+}
+
+.b-contacts > a.tel {
+    font-size: 24px;
+    font-weight: 700;
+    font-family: "Circe Bold", sans-serif;
+}
+
+.b-contacts > a.address {
+    font-size: 18px;
+    font-weight: 300;
+    font-family: "Circe Light", sans-serif;
+}
+
+.banner .info a {
+    display: block;
+}
+
+.banner .text {
+    max-width: 780px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 62px;
+}
+
+.banner strong {
+    font-family: "Circe", sans-serif;
+    padding-top: 4px;
+    display: inline-block;
+}
+
+.brand-holder {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 1036px;
+    margin: auto;
+    margin-bottom: 41px;
+}
+
+.brand-img {
+    height: 100px;
+    width: 150px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: .65;
+}
+
+.brand-img.nike {
+    width: 114px;
+}
+
+.brand-img.adidas {
+    height: 74px;
+}
+
+.brand-img.puma {
+    height: 67px;
+    width: 152px;
+}
+
+.brand-img.nb {
+    width: 137px;
+}
+
+.brand-img.reebok {
+    width: 157px;
+}
+
+.banner .common-btn {
+    margin-bottom: 160px;
+}
+
+section.about-company {
+    margin-bottom: 95px;
+}
+
+.about-company .wrapper {
+    display: flex;
+    align-items: stretch;
+}
+
+.about-company .content-l {
+    width: 56%;
+    margin-right: 88px;
+}
+
+.about-company .content-r {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 62%;
+    vertical-align: top;
+    flex-wrap: wrap;
+    /*
+    float: right;
+    */
+    margin-right: -303px;
+    position: relative;
+}
+
+.about-company .content-r:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    bottom: 0;
+    right: 0;
+    /* background: rgba(178, 34, 34, 0.55);*/
+    width: 70%;
+    background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffff', GradientType=1);
+    z-index: 1;
+}
+
+.content-r .item-i {
+    width: 33.3%;
+}
+
+.item-i .brand-img {
+    width: 100px;
+}
+
+.about-company p,
+.about-company strong {
+    margin-bottom: 27px;
+    display: inline-block;
+    line-height: 1.6;
+}
+
+.about-company strong {
+    font-family: "Circe Bold", sans-serif;
+}
+
+.benefits {
+    background: #fbfdfd;
+    padding: 48px 0px 44px 0;
+    margin-bottom: 74px;
+}
+
+.benefits .wrapper {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.benf-item {
+    text-align: center;
+    padding: 0 30px;
+}
+
+.icon-holder {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+.benf-item .text {
+    font-family: "Circe", sans-serif;
+    max-width: 90%;
+    margin: auto;
+    line-height: 1.4;
+}
+
+.contacts {
+    padding-bottom: 50px;
+}
+
+.contacts .wrapper {
+    display: flex;
+    align-items: flex-start;
+}
+
+.contacts .content-l,
+.contacts .content-r {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.contacts .content-l {
+    width: 43.2%;
+    margin-right: 80px;
+    vertical-align: top;
+}
+
+.contacts .common-btn {
+    display: block;
+    padding: 15px 85px;
+}
+
+.contacts .content-r {
+    width: 55.5%;
+    font-family: "Circe", sans-serif;
+    font-size: 16px;
+    padding-top: 7px;
+}
+
+.contacts .content-r p {
+    margin-bottom: 16px;
+    font-family: "Circe", sans-serif;
+    line-height: 1.22;
+}
+
+.contacts .content-r a {
+    font-family: "Circe Bold", sans-serif;
+    display: inline-block;
+    color: #47c7b1;
+    font-size: 24px;
+    letter-spacing: 0.04em;
+    margin-bottom: 27px;
+}
+
+.map-holder {
+    height: 350px;
+}
+
+@media all and (max-width: 1220px) {
+    header, section {
+        padding: 0 40px;
+    }
+
+}
+
+@media all and (max-width: 768px) {
+    .banner .info {
+        margin-bottom: 75px;
+    }
+
+    .brand-img.nike {
+        width: 73px;
+    }
+
+    .brand-img.adidas {
+        height: 46px;
+    }
+
+    .brand-img.puma {
+        height: 45px;
+    }
+
+    .brand-img.nb {
+        height: 45px;
+    }
+
+    .brand-img.reebok {
+        width: 123px;
+    }
+
+    .about-company .content-l {
+        width: 100%;
+        margin: 0;
+        text-align: justify;
+    }
+
+    .about-company .content-r {
+        display: none;
+    }
+
+    .benefits .wrapper {
+        flex-wrap: wrap;
+    }
+
+    .benf-item {
+        width: 45%;
+        margin-bottom: 48px;
+    }
+
+    .benefits {
+        padding-bottom: 0;
+    }
+
+    .icon-holder {
+        margin-bottom: 12px;
+    }
+
+    .contacts .wrapper {
+        flex-wrap: wrap;
+    }
+
+    .contacts .content-l, .contacts .content-r {
+        width: 100%;
+        margin: 0;
+    }
+
+    .contacts .content-l {
+        margin-bottom: 50px;
+    }
+
+    .common-input:last-of-type {
+        margin-bottom: 30px;
+    }
+
+    .contacts .content-r {
+        text-align: center;
+    }
+
+}
+
+@media all and (max-width: 710px) {
+    header, section {
+        padding: 0 20px;
+    }
+
+    .banner h1 {
+        font-size: 14px;
+    }
+
+    .banner h1 > span {
+        font-size: 31px;
+    }
+
+    .b-contacts > a.tel {
+        font-size: 22px;
+    }
+
+    .b-contacts > a.address {
+        font-size: 16px;
+    }
+
+    .text {
+        font-size: 16px;
+    }
+
+    .common-btn {
+        padding: 10px 53px;
+    }
+
+    section h4 {
+        margin-bottom: 58px;
+        font-size: 28px;
+    }
+
+    .about-company p, .about-company strong {
+        margin-bottom: 19px;
+    }
+
+    .common-input {
+        margin-bottom: 44px;
+    }
+
+    .common-input > span {
+        font-size: 16px;
+    }
+
+    .common-input > input {
+        line-height: 1;
+        font-size: 15px;
+    }
+
+    .common-input > input:focus + span, .common-input > input.not-empty + span {
+        font-size: 13px;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .banner .info {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-top: 17px;
+    }
+
+    .banner h1 {
+        margin-bottom: 15px;
+        margin-right: 0;
+    }
+
+    .logo {
+        width: 100%;
+    }
+
+    .b-contacts {
+        text-align: center;
+    }
+
+    .banner .text {
+        margin-bottom: 25px;
+    }
+
+    .benf-item {
+        padding: 0;
+    }
+
+    .brand-img.adidas {
+        height: 26px;
+    }
+
+    .brand-img.puma {
+        height: 26px;
+    }
+
+    .brand-img.nb {
+        height: 26px;
+    }
+
+    .brand-img.reebok {
+        width: 93px;
+    }
+
+    section h4 {
+        margin-bottom: 38px;
+        font-size: 23px;
+        text-align: center;
+    }
+
+    section h4:before {
+        bottom: -16px;
+        left: 50%;
+        margin-left: -44.5px;
+    }
+}
+
+@media all and (max-width: 600px) {
+    header, section {
+        padding: 0;
+    }
+
+    .benefits,
+    section.about-company {
+        margin-bottom: 50px;
+    }
+
+    .benefits .wrapper {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .benf-item {
+        width: 80%;
+    }
+
+    .brand-img {
+        height: 45px;
+    }
+
+    .banner .common-btn {
+        margin-bottom: 76px;
+    }
+
+    .brand-holder {
+        margin-bottom: 60px;
+    }
+
+    .common-input > input:focus + span, .common-input > input.not-empty + span {
+        bottom: 30px;
+    }
+
+    .banner .info {
+        margin-bottom: 41px;
+    }
+
+}
+
