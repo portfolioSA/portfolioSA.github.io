@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OneHub</title>
+    <meta http-equiv="x-ua-compatible"
+          content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="format-detection"
+          content="telephone=no">
+    <link rel="stylesheet"
+          href="combined.css">
+</head>
+<body class="page">
+<div class="page__content">
+    <div class="pageWrapper pageHeader__container">
+        <header class="pageHeader">
+            <a href="#"
+               class="pageHeader__logo commonLogo"></a>
+            <label for="menuSwitcher">
+                <input type="checkbox"
+                       id="menuSwitcher"/>
+                <nav class="pageHeader__menu">
+                    <a href=""
+                       class="pageHeader__menu__item pageHeader__menu__item_icon"
+                       style="background-image: url('img/icon-menu-house.svg')"></a>
+                    <a href=""
+                       class="pageHeader__menu__item">выкуп</a>
+                    <a href=""
+                       class="pageHeader__menu__item">в продаже</a>
+                    <a href=""
+                       class="pageHeader__menu__item">контакты</a>
+                    <div class="pageHeader__menu__language">
+                        <div class="pageHeader__menu__language__text">ru</div>
+                        <div class="pageHeader__menu__language__arrow"
+                             style="background-image: url('img/icon-carret-down.svg')"></div>
+                        <ul class="pageHeader__menu__language__var">
+                            <li class="pageHeader__menu__language__var__item pageHeader__menu__language__item_en"><a href="#">en</a></li><!--
+                            -->
+                            <li class="pageHeader__menu__language__var__item pageHeader__menu__language__item_ru"><a href="#">ru</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </label>
+        </header>
+    </div>
+    <main class="pageContent">
+        <section class="pageLead">
+            <article class="pageLead__header">
+                <div class="pageWrapper">
+                    <article class="pageLead__header__contacts">
+                        <div class="pageLead__header__contacts__item">
+                            <div class="pageLead__header__contacts__item__icon pageLead__header__contacts__item__icon_phone"></div>
+                            <div class="pageLead__header__contacts__item__text pageLead__header__contacts__item__text_phone">+38 (123)
+                                <span class="pageLead__header__contacts__item__text_marked">111 11 11</span>
+                            </div>
+                        </div>
+                        <div class="pageLead__header__contacts__item">
+                            <div class="pageLead__header__contacts__item__icon pageLead__header__contacts__item__icon_mail"></div>
+                            <div class="pageLead__header__contacts__item__text pageLead__header__contacts__item__text_mail">info@lorem.com.ua</div>
+                        </div>
+                    </article>
+                    <article class="pageLead__header__text">
+                        <h1 class="pageLead__header__text__title">выкуп часов <span class="pageLead__header__text__title_marked"> и ювелирных изделий</span></h1>
+                        <div class="pageLead__header__text__details">мы покупаем только изделия премиум класса</div>
+                        <a href="#buyout"
+                           class="pageLead__header__text__button commonButton">Заполнить заявку</a>
+                    </article>
+                </div>
+            </article>
+            <article class="pageLead__latest">
+                <div class="pageLead__latest__headerContainer"><!--Этот блок поднимает надпись на нужный уровень-->
+                    <div class="pageWrapper pageLead__latest__headerContainer__wrapper"> <!--Этот блок не дает контенту
+                        уползать за пределы экрана. Второй класс добавлен для того, чтобы :before этого блока закрывал проплешину слева-->
+                        <div class="pageLead__latest__header"><!--Этот блок "держит" надписи в нужном месте.
+                            Его :before делает треугольник, :after же - это маленькая скошенная тень (которая справа от надписи)-->
+                            <div class="pageLead__latest__header__necessaryEvil"></div><!--Это блок: :before - для правой
+                                маски на картинку; :after - для левой маски на картинку-->
+                            <div class="pageLead__latest__header__text"><!--Дизайн не объясняет как должен вести себя этот
+                                заголовок, если контента в нем станет больше или меньше. Поэтому, я зафиксировала максимальную
+                                ширину и поставила text-overflow: ellipse; Это даст возможность контентщикам понять, что заголовок слишком большой.
+                                Если же нужно, чтобы заголовок тянулся по контенту - следует убрать фиксированную ширину блока.
+                                Минимальную ширину я не фиксировала, поэтому, если контента будет меньше, правый край заголовка подвинется влево.
+                                Отсюда - возможное несоответствие дизайну.
+                                Можно было бы сделать так, чтобы текст становился в 2 строки, но тогда нужно подергать
+                                дизайнера и уточнить как это должно выглядеть: слеши привязаны к первой строке или стоят по центру блока?;
+                                что происходит, когда заголовок не помещается в отведенное пространство?; и тд.-->
+                                <div class="pageLead__latest__header__text__item pageLead__latest__header__text__item_marked">
+                                </div>
+                                <div class="pageLead__latest__header__text__item">
+                                    последние поступления
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pageWrapper">
+                    <div class="pageLead__latest__container">
+                        <article class="product">
+                            <a href=""
+                               class="product__img"
+                               style="background-image: url('img/item1.png');">
+                                <header class="product__title">Rolex GMT Master 2 Red / Black Coke</header>
+                                <div class="product__price"> <!--Этот контейнер (и подобные ему) имеет двоих потомков на случай,
+                                    если будет принято решение валютный знак установить иконкой-->
+                                    <span class="product__price__item product__price__item_icon">$</span><!-- Блок для иконки -->
+                                    <span class="product__price__item product__price__item_value">5 995</span> <!-- Блок для цены -->
+                                </div>
+                            </a>
+                        </article>
+                        <article class="product">
+                            <a href=""
+                               class="product__img"
+                               style="background-image: url('img/item2.png');">
+                                <header class="product__title">Hublot Big Bang 44mm Red Gold Ceramic 18k</header>
+                                <div class="product__price">
+                                    <span class="product__price__item product__price__item_icon">$</span>
+                                    <span class="product__price__item product__price__item_value">7 340</span>
+                                </div>
+                            </a>
+                        </article>
+                        <article class="product">
+                            <a href=""
+                               class="product__img"
+                               style="background-image: url('img/item3.png');">
+                                <header class="product__title">Hublot 301.PB.131.RX</header>
+                                <div class="product__price">
+                                    <span class="product__price__item product__price__item_icon">$</span>
+                                    <span class="product__price__item product__price__item_value">18 300</span>
+                                </div>
+                            </a>
+                        </article>
+                        <article class="product">
+                            <a href=""
+                               class="product__img"
+                               style="background-image: url('img/item4.png');">
+                                <header class="product__title">Hublot Big Bang 44mm Red Gold Ceramic 18k</header>
+                                <div class="product__price">
+                                    <span class="product__price__item product__price__item_icon">$</span>
+                                    <span class="product__price__item product__price__item_value">7 340</span>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section class="buyout"
+                 id="buyout">
+            <input type="radio"
+                   id="watch"
+                   name="formSwitcher"
+                   checked="checked">
+            <input type="radio"
+                   id="jewelery"
+                   name="formSwitcher">
+            <div class="buyout__container buyout__container_description">
+                <article class="buyout__description">
+                    <h3 class="buyout__description__header">Заявка на выкуп</h3>
+                    <div class="buyout__description__item">Выберите тип изделия которое хотели бы продать</div>
+                    <label for="watch">
+                        <span class="buyout__description__button buyout__description__button_clock commonButton">
+                            <div class="buyout__description__button__icon buyout__description__button__icon_clock"></div>
+                            <span class="buyout__description__button__text"> часы </span>
+                        </span>
+                    </label>
+                    <label for="jewelery">
+                        <span class="buyout__description__button buyout__description__button_jewelery commonButton">
+                            <div class="buyout__description__button__icon buyout__description__button__icon_jewelery"></div><!--
+                            --><span class="buyout__description__button__text">ювелирные изделия</span>
+                        </span>
+                    </label>
+                    <h4 class="buyout__description__title">Почему Watch?</h4>
+
+                    <p>
+                        Lorem ipsum dolor sit amet, ne inani vivendum antiopam eum, vis harum scripserit an. Sea saepe blandit appellantur no, cu epicurei dignissim definiebas quo, est purto inermis legendos ea. Pertinacia concludaturque ius ad, ei deleniti delectus probatus sit, ea saperet repudiandae est.
+
+                    </p>
+                    <p>
+                        Doming lucilius ius ne, eos summo epicuri nominati eu, ad mel modo labitur. In vis graecis aliquando, cu eam liber delicatissimi. Diceret vocibus est cu, sea ne latine honestatis. Cu facete efficiantur vim, eam discere urbanitas theophrastus ut. Tale option inermis an nec, ut vix aeque tincidunt consequuntur. Ne etiam ancillae sententiae per.
+                    </p>
+                    <p>
+                        Sit suas elit putent eu, et ius luptatum evertitur repudiandae. Nam ne quas corpora suscipiantur, quo ex voluptua accusamus sadipscing, eros veri pertinax nec at. Esse nominavi cu vel. Vel ei aperiam invidunt, quo no consul recusabo theophrastus, primis intellegat cu sea. Atqui splendide nec eu, vide nominati vituperata mel et. His ex congue instructior, mucius forensibus vituperatoribus vim id, vim an vero facer similique.
+                    </p>
+                    <p>
+                        Sed nostrum indoctum honestatis id, primis aliquid ius te, mei te velit augue impetus. Epicuri oporteat intellegebat at est, cu eum adhuc meliore. Ut solet disputando ius, modus consulatu per ex. Primis labitur percipitur ne sit, eu mei repudiare quaerendum liberavisse.
+                    </p>
+                    <p>
+                        Sed nostrum indoctum honestatis id, primis aliquid ius te, mei te velit augue impetus. Epicuri oporteat intellegebat at est, cu eum adhuc meliore. Ut solet disputando ius, modus consulatu per ex. Primis labitur percipitur ne sit, eu mei repudiare quaerendum liberavisse.
+                    </p>
+                </article>
+            </div>
+            <div class="buyout__container buyout__container_form"
+                 id="formWatch">
+                <!--Вся форма сделана так, будто бы стоит задание использовать встроенную в браузер валидацию.
+                Исходя из этой задачи, в некоторых местах добавлены комментарии о поддержке разных атрибутов тега <input>.
+                -->
+                <form class="form form_watch"
+                      action=""
+                      method="post"
+                      name="form_watch"
+                      enctype="multipart/form-data"
+                      target="">
+                    <h3 class="form__title">
+                        <div class="form__title__icon form__title__icon_watch"></div>
+                        часов
+                    </h3>
+                    <div class="formItem">
+                        <header class="title title_sellerInfo">Данные продавца</header>
+                        <input name=""
+                               class="commonInput fullName"
+                               type="text"
+                               placeholder="ФИО"
+                               pattern="[A-Za-zА-Яа-яЁё-А-ЯІЇЄҐ-а-яіїєґ]"
+                               autocomplete="off"><!--
+                        В атрибуте pattern разрешен ввод имени на украинском, английском и русском языках.
+                        Атрибут pattern не работает в Safari  -->
+                        <div class="wrapper_phone">
+                            <input name=""
+                                   class="commonInput phoneFixed"
+                                   readonly="readonly"
+                                   value="+380"><!--У меня нет информации о том, должны ли отправляться данные
+                            этого поля на сервер для правильной обработки. Вероятнее всего - должны.
+                            Если значение этой формы не должно отправляться на сервер, замени атрибут readonly="readonly"
+                            на disabled (вот так: <input readonly="readonly"> на <input disabled>) -->
+                            <input name=""
+                                   placeholder="Номер телефона"
+                                   class="commonInput phoneRequired"
+                                   type="text"
+                                   pattern="[0-9]{3}-[0-9]{2}-[0-9]{2}"
+                                   title="Введите номер в формате 123-45-67"
+                                   autocomplete="off">
+                            <!-- Если оставляем валидацию в текущем формате, нужно
+                            позаботиться о валидации этого поля ввода в Safari.
+                            Так как изначально пользователь не оповещен о формате ввода номера телефона, добавлен атрибут title.
+                            Это не лучший вариант, так как он не понятен пользователю интуитивно, но соответствует требованиям дизайна.
+                            Другие варианты:
+                            1. Стилизовать плейсхолдер с указанием формата ввода данных;
+                            2. Добавить блок с указанием требований к формату ввода данных;
+                            3. Снять валидацию на этом этапе и оставить эту задачу программистам. Этот вариант хорош еще и
+                            тем, что атрибут pattern не поддерживается Safari.
+                            -->
+                        </div>
+                        <input name=""
+                               placeholder="Электронная почта"
+                               class="commonInput email"
+                               type="email"
+                               autocomplete="off"><!--type="email" не поддерживается Internet Explorer 9 (и более ранние версии)
+                        или Safari.
+                        Атрибут pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" (или любую другую регулярку) для валидации
+                        вводимого адреса электронной почты я не добавляю потому, что надежнее письмо на почту с
+                        проверкой отправить, чем понять какая регулярка нужна -->
+                    </div>
+                    <div class="formItem">
+                        <header class="title title_productInfo">Информация об изделии</header>
+                        <div class="wrapper_select">
+                            <select name=""
+                                    required
+                                    class="commonInput selectInput">
+                                <option value="rolex"
+                                        class="selectInput__item">Rolex
+                                </option>
+                                <option value="boss"
+                                        class="selectInput__item">Boss
+                                </option>
+                                <option value="tissot"
+                                        class="selectInput__item">Tissot
+                                </option>
+                                <option value="cartier"
+                                        class="selectInput__item">Cartier
+                                </option>
+                                <option value="bulgari"
+                                        class="selectInput__item">Bulgari
+                                </option>
+                                <option value="panerai"
+                                        class="selectInput__item">Panerai
+                                </option>
+                                <option value="franckMuller"
+                                        class="selectInput__item">Franck Muller
+                                </option>
+                                <option value="vacheronConstantin"
+                                        class="selectInput__item">Vacheron Constantin
+                                </option>
+                            </select>
+                        </div>
+                        <input name=""
+                               placeholder="Модель"
+                               type="text"
+                               class="commonInput model"
+                               autocomplete="off">
+                        <input name=""
+                               placeholder="Референс"
+                               type="text"
+                               class="commonInput reference"
+                               autocomplete="off">
+                        <input name=""
+                               placeholder="Год выпуска"
+                               type="number"
+                               class="commonInput issueDate"
+                               name="year"
+                               min="1735"
+                               max="2017"
+                               autocomplete="off"><!--max="2017" - на место значения [2017] нужно
+                               скриптами передать текущий год-->
+                    </div>
+                    <div class="formItem formItemUpload">
+                        <header class="title title_download">Фотография изделия</header>
+                        <div class="formItemUpload__notification">Вам необходимо загрузить как минимум
+                            <div class="formItemUpload__notification_marked"> 3 фотографии</div>
+                        </div>
+                        <div class="formItemUpload__wrapper formItemUpload__wrapper_watch">
+                            <label class="mask"
+                                   style="background-image: url('img/preview-watch.png')">
+                                <input type="file"
+                                       required
+                                       accept="image/*"
+                                       autocomplete="off">
+                            </label>
+                            <label class="mask maskEmpty maskEmpty_watch">
+                                <input type="file"
+                                       class="formItemUpload__img"
+                                       required
+                                       accept="image/*"
+                                       autocomplete="off">
+                            </label>
+                            <label class="mask maskEmpty maskEmpty_watch">
+                                <input type="file"
+                                       class="formItemUpload__img"
+                                       required
+                                       accept="image/*"
+                                       autocomplete="off">
+                            </label>
+                            <div class="mask maskEmpty maskEmpty_watch"
+                                 title="А этот блок не работает - так задумано. Подробнее - в комментариях index.html">
+                                <!--тут я использую тег <div> в качестве примера, чтобы показать как должна выглядеть HTML-разметка,
+                                если будет принято решение использовать какие-либо JavaScript'овые плагины для контроля подгружаемых файлов.
+                                В таком случае, все инпуты типа файл нужно переделать по образу и подобию последнего (этого) блока-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wrapper_button">
+                        <button type="submit"
+                                class="formButton formButton_watch commonButton">отправить
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="buyout__container buyout__container_form"
+                 id="formJewelery">
+                <form class="form form_jewelery"
+                      action=""
+                      method="post"
+                      name="form_jewelery"
+                      enctype="multipart/form-data"
+                      target="">
+                    <h3 class="form__title">
+                        <div class="form__title__icon form__title__icon_jewelery"></div>
+                        ювелирных изделий
+                    </h3>
+                    <div class="formItem">
+                        <header class="title title_sellerInfo">Данные продавца</header>
+                        <input name=""
+                               class="commonInput fullName"
+                               type="text"
+                               placeholder="ФИО"
+                               pattern="[A-Za-zА-Яа-яЁё-А-ЯІЇЄҐ-а-яіїєґ]"
+                               autocomplete="off"><!--
+                        В атрибуте pattern разрешен ввод имени на украинском, английском и русском языках.
+                        Атрибут pattern не работает в Safari  -->
+                        <div class="wrapper_phone">
+                            <input name=""
+                                   class="commonInput phoneFixed"
+                                   readonly="readonly"
+                                   value="+380"><!--У меня нет информации о том, должны ли отправляться данные
+                            этого поля на сервер для правильной обработки. Вероятнее всего - должны.
+                            Если значение этой формы не должно отправляться на сервер, замени атрибут readonly="readonly"
+                            на disabled (вот так: <input readonly="readonly"> на <input disabled>) -->
+                            <input name=""
+                                   placeholder="Номер телефона"
+                                   class="commonInput phoneRequired"
+                                   type="text"
+                                   pattern="[0-9]{3}-[0-9]{2}-[0-9]{2}"
+                                   title="Введите номер в формате 123-45-67"
+                                   autocomplete="off">
+                            <!-- Если оставляем валидацию в текущем формате, нужно
+                            позаботиться о валидации этого поля ввода в Safari.
+                            Так как изначально пользователь не оповещен о формате ввода номера телефона, добавлен атрибут title.
+                            Это не лучший вариант, так как он не понятен пользователю интуитивно, но соответствует требованиям дизайна.
+                            Другие варианты:
+                            1. Стилизовать плейсхолдер с указанием формата ввода данных;
+                            2. Добавить блок с указанием требований к формату ввода данных;
+                            3. Снять валидацию на этом этапе и оставить эту задачу программистам. Этот вариант хорош еще и
+                            тем, что атрибут pattern не поддерживается Safari.
+						    -->
+                        </div>
+                        <input name=""
+                               placeholder="Электронная почта"
+                               class="commonInput email"
+                               type="email"
+                               autocomplete="off">
+                        <!--type="email" не поддерживается Internet Explorer 9 (и более ранние версии) или Safari-->
+                    </div>
+                    <div class="formItem">
+                        <header class="title title_productInfo">Информация об изделии</header>
+                        <div class="wrapper_select">
+                            <select name=""
+                                    required
+                                    class="commonInput selectInput">
+                                <option value="ring"
+                                        class="selectInput__item">Кольцо
+                                </option>
+                                <option value="pendant"
+                                        class="selectInput__item">Подвеска
+                                </option>
+                                <option value="necklace"
+                                        class="selectInput__item">Ожерелье
+                                </option>
+                                <option value="bracelet"
+                                        class="selectInput__item">Браслет
+                                </option>
+                                <option value="hairgrip"
+                                        class="selectInput__item">Заколка
+                                </option>
+                                <option value="diadem"
+                                        class="selectInput__item">Диадема
+                                </option>
+                                <option value="brooch"
+                                        class="selectInput__item">Брошь
+                                </option>
+                                <option value="cufflinks"
+                                        class="selectInput__item">Запонки
+                                </option>
+                            </select>
+                        </div>
+                        <div class="wrapper_select wrapper_selectMaterial">
+                            <select name="material"
+                                    required
+                                    class="commonInput selectInput">
+                                <option value=""
+                                        class="selectInput__item"
+                                        disabled>материал
+                                </option>
+                                <option value="platinum"
+                                        class="selectInput__item">Платина
+                                </option>
+                                <option value="gold958"
+                                        class="selectInput__item">Золото 958-й пробы
+                                </option>
+                                <option value="gold750"
+                                        class="selectInput__item">Золото 750-й пробы
+                                </option>
+                                <option value="gold585"
+                                        class="selectInput__item">Золото 585-й пробы
+                                </option>
+                                <option value="gold500"
+                                        class="selectInput__item">Золото 500-й пробы
+                                </option>
+                                <option value="silver"
+                                        class="selectInput__item">Серебро
+                                </option>
+                            </select>
+                            <!--Я заметила, что инпут "Материалы" отличается от остальных. Я нашла только один способ
+                            сделать эту выпадайку без применения JavaScript'а таким образом, как указано на дизайне (через имитацию
+                            селекта радиокнопками), но я не решилась его использовать - слишком странный и какой-то совсем
+                            неживой вариант. Поэтому, пункт "Материалы" все-таки отображается в выпадающем списке, хоть
+                            выбрать его и нельзя. Тем не менее, если нужно сделать так, чтобы "плейсхолдер" не отображался
+                            в выпадающем списке - дайте мне знать и я переделаю этот пункт-->
+                        </div>
+                        <div class="gemCheckbox">
+                            <label><input type="checkbox"
+                                          name=""
+                                          class="gemInput"><span class="gemCheckboxMask"></span>Драгоценный камень</label>
+                        </div> <!--Это элемент должен активировать следующие два выпадающих списка (если элемент не
+                        выбран - два следующих не имеют смысла) - тут только JavaScript-->
+                        <div class="wrapper_select">
+                            <select name="gemStone"
+                                    required
+                                    class="commonInput selectInput">
+                                <option value="sapphire"
+                                        class="selectInput__item">Сапфир
+                                </option>
+                                <option value="garnet"
+                                        class="selectInput__item">Гранат
+                                </option>
+                                <option value="emerald"
+                                        class="selectInput__item">Изумруд
+                                </option>
+                                <option value="amethyst"
+                                        class="selectInput__item">Аметист
+                                </option>
+                                <option value="ruby"
+                                        class="selectInput__item">Рубин
+                                </option>
+                                <option value="opal"
+                                        class="selectInput__item">Опал
+                                </option>
+                                <option value="diamond"
+                                        class="selectInput__item">Алмаз
+                                </option>
+                                <option value="pearl"
+                                        class="selectInput__item">Жемчуг
+                                </option>
+                                <option value="pearl"
+                                        class="selectInput__item">Жемчуг
+                                </option>
+                                <option value="burmeseTourmaline"
+                                        class="selectInput__item">Бирманский турмалин
+                                </option>
+                            </select>
+                        </div>
+                        <input name=""
+                               placeholder="Общий каратный вес"
+                               type="text"
+                               class="commonInput model"
+                               autocomplete="off"><!--Это поле
+                        ввода никак не проверяет пользовательский ввод-->
+                    </div>
+                    <div class="formItem formItemUpload">
+                        <header class="title title_download title_download_jewelery">Фотография изделия</header>
+                        <div class="formItemUpload__notification">Вам необходимо загрузить как минимум
+                            <div class="formItemUpload__notification_marked"> 3 фотографии</div>
+                        </div>
+                        <div class="formItemUpload__wrapper formItemUpload__wrapper_jewelery">
+                            <label class="mask"
+                                   style="background-image: url('img/preview-jewelery.png')">
+                                <input type="file"
+                                       required
+                                       accept="image/*"
+                                       autocomplete="off">
+                            </label>
+                            <label class="mask maskEmpty maskEmpty_jewelery">
+                                <input type="file"
+                                       class="formItemUpload__img"
+                                       required
+                                       accept="image/*"
+                                       autocomplete="off">
+                            </label>
+                            <label class="mask maskEmpty maskEmpty_jewelery">
+                                <input type="file"
+                                       class="formItemUpload__img"
+                                       required
+                                       accept="image/*"
+                                       autocomplete="off">
+                            </label>
+                            <div class="mask maskEmpty maskEmpty_jewelery"
+                                 title="А этот блок не работает - так задумано. Подробнее - в комментариях index.html">
+                                <!--тут я использую тег <div> в качестве примера, чтобы показать как должна выглядеть HTML-разметка,
+                                если будет принято решение использовать какие-либо JavaScript'овые плагины для контроля подгружаемых файлов.
+							    В таком случае, все инпуты типа файл нужно переделать по образу и подобию последнего (этого)
+							    блока-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wrapper_button">
+                        <button type="submit"
+                                class="formButton formButton_jewelery commonButton">отправить
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <div class="page__footerWrap">
+        <footer class="pageFooter">
+            <div class="pageWrapper pageFooter__container">
+                <div class="pageFooter__logo commonLogo"></div>
+                <div class="pageFooter__info">
+                    <div class="pageFooter__info__rights">&#169;2016 &#171;Тестовое задание&#187;</div>
+                    <div class="pageFooter__info__creators">Разработка и поддержка сайта &#8211;
+                        <a href=""
+                           class="pageFooter__info__creators_marked">Lorem</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+</body>
+</html>
