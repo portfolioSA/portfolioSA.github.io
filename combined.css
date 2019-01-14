@@ -317,3 +317,43 @@ h3 {
 .pageContent__gallery__auxInfo__social__item:hover svg {
     fill: white;
 }
+
+@media screen and (max-width: 1300px){
+    .pageContent{
+        padding: 0 20px;
+    }
+
+    .pageContent__gallery {
+        padding: 0;
+    }
+
+    .pageContent__gallery__title{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 770px){
+    .pageContent__gallery__wrapper{
+        -webkit-box-pack: center;
+        -webkit-justify-content: space-around;
+        -ms-flex-pack: center;
+        justify-content: space-around;
+    }
+
+    .pageContent__gallery__item{
+        width: 75vw;
+    }
+}
+@media screen and (max-width: 600px){
+    .pageContent__gallery__item{
+        height: 360px;
+        width: 90vw;
+    }
+}
+
+@media screen and (max-width: 425px){
+    .pageContent__gallery__item{
+        width: 100%;
+        padding: 0 0 20px 0;
+    }
+}
