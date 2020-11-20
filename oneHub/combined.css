@@ -9,7 +9,7 @@
     content: " ";
     display: block;
     clear: both; }
-  
+
 h1 {
   font-size: 48px;
   font-size: 3rem;
@@ -1015,7 +1015,9 @@ option {
   width: -webkit-calc(25% - 15.5px);
   width: calc(25% - 15.5px);
   position: relative;
-  cursor: pointer; }
+  cursor: pointer;
+  transition: .3s;
+}
   .maskEmpty_watch {
     border-color: #dad6d7; }
   .maskEmpty_jewelery {
